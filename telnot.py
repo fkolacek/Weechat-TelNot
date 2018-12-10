@@ -75,7 +75,7 @@ def send_notification(server, channel, nick, message):
     else:
         output = '[{}@{}] {}: {}'.format(nick, server, channel, message)
 
-    data = urllib.urlencode({
+    data = urlencode({
         'message': output,
         'token': token,
         'bot': bot,
