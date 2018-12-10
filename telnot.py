@@ -2,9 +2,13 @@
 # Author: Frantisek Kolacek <work@kolacek.it>
 # Homepage: https://github.com/fkolacek/weechat-telnot
 
-import urllib
-
 import weechat
+
+try:
+    # Python 3
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 weechat.register('telnot',
                  'Frantisek Kolacek <work@kolacek.it>',
